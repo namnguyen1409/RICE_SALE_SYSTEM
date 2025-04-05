@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: RICE_SALE_SYSTEM
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rice_sale_system
+    username: postgres
+    password: 1409
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+app:
+  security:
+    algorithm: HS512
+    secret: 1409
+    jwt:
+      access-token:
+        secret: mySecretKey123
+        expiration: 15m
+      refresh-token:
+        secret: mySecretKey456
+        expiration: 30d
+server:
+  port: 8080
