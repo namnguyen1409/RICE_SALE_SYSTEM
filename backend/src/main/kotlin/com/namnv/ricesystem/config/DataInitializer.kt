@@ -6,8 +6,13 @@ import com.namnv.ricesystem.enums.AuthProvider
 import com.namnv.ricesystem.enums.Gender
 import com.namnv.ricesystem.enums.UserRole
 import com.namnv.ricesystem.repository.AccountRepository
+import com.namnv.ricesystem.repository.FontRepository
 import com.namnv.ricesystem.repository.UserRepository
+import com.namnv.ricesystem.service.FontService
 import jakarta.annotation.PostConstruct
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
@@ -22,8 +27,10 @@ class DataInitializer(
     private val userRepository: UserRepository,
     private val accountRepository: AccountRepository,
     private val passwordEncoder: PasswordEncoder,
+    private val fontRepository: FontRepository,
+    private val fontService: FontService,
 
-) {
+    ) {
 
     private val logger: Logger = LoggerFactory.getLogger(DataInitializer::class.java)
 
@@ -35,8 +42,11 @@ class DataInitializer(
 
 
     @PostConstruct
-    fun init() {
+     fun init() {
         initDatabase()
+        CoroutineScope(Dispatchers.IO).launch {
+            initFonts()
+        }
         initAdmin()
     }
 
@@ -58,7 +68,16 @@ class DataInitializer(
         }
     }
 
-
+    private fun initFonts() {
+        if(fontRepository.count()== 0L) {
+            CoroutineScope(Dispatchers.IO).launch {
+                fontService.refreshFonts()
+            }
+            logger.info("✅ Fonts initialized successfully")
+        }else{
+            logger.info("ℹ️ Fonts already initialized")
+        }
+    }
 
     private fun initAdmin() {
         if (!userRepository.existsByUsername("admin")) {

@@ -1,4 +1,5 @@
-
+server:
+  port: 8080
 spring:
   application:
     name: RICE_SALE_SYSTEM
@@ -8,9 +9,13 @@ spring:
     password: 1409
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
+    show-sql: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
+api:
+  google-font:
+    key: AIzaSyBFrVd78WDzOu4181HeyxnaFUMoMgoMPbI
+
 
 app:
   security:
@@ -23,5 +28,3 @@ app:
       refresh-token:
         secret: mySecretKey456
         expiration: 30d
-server:
-  port: 8080

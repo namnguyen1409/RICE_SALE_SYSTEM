@@ -26,7 +26,10 @@ class SecurityConfig {
             it.disable()
         }.authorizeHttpRequests { auth ->
                 auth
-                    .requestMatchers("/api/v1/auth/**").permitAll()
+                    .requestMatchers(
+                        "/api/v1/auth/**",
+                        "/api/v1/fonts/**",
+                    ).permitAll()
                     .anyRequest().authenticated()
         }.formLogin {
             it.loginPage("/api/v1/auth/login")

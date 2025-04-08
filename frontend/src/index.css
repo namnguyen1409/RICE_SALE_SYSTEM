@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fade-theme {
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.fade-theme.show {
+  opacity: 1;
+}
