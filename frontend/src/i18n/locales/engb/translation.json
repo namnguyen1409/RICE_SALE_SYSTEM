@@ -1,0 +1,13 @@
+
+{
+    "code": "en-GB",
+    "name": "English (United Kingdom)",
+    "flag": "🇬🇧",
+    "greeting": "Hello",
+    "login": "Login",
+    "theme.language" : "Language",
+    "theme.customizer" : "Theme Customizer",
+    "theme.mode" : "Theme Mode",
+    "theme.mode.light" : "Light",
+    "theme.mode.dark" : "Dark"
+}

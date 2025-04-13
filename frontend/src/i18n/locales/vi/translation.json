@@ -1,0 +1,18 @@
+{
+  "code": "vi-VN",
+  "name": "Tiếng Việt (Việt Nam)",
+  "flag": "🇻🇳",
+  "greeting": "Xin chào",
+  "login": "Đăng nhập",
+  "theme.language": "Ngôn ngữ",
+  "theme.customizer": "Tùy chỉnh giao diện",
+  "theme.basic": "Cơ bản",
+  "theme.advanced": "Nâng cao",
+  "theme.mode": "Chế độ giao diện",
+  "theme.mode.light": "Sáng",
+  "theme.mode.dark": "Tối",
+  "theme.themeAndLanguage": "Giao diện & Ngôn ngữ",
+  "theme.color": "Màu sắc",
+  "theme.brandColor": "Màu thương hiệu",
+  "theme.colorPrimary": "Màu chính"
+}

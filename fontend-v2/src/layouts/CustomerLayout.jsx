@@ -7,11 +7,11 @@ const headerStyle = {
 };
 const contentStyle = {
   textAlign: "center",
-  minHeight: 120
+  minHeight: 120,
 };
 
 const footerStyle = {
-  textAlign: "center"
+  textAlign: "center",
 };
 const layoutStyle = {
   with: "100vw",
@@ -29,6 +29,11 @@ const CustomerLayout = () => {
         <div style={{ padding: 24, minHeight: 360 }}>
           <h1>Welcome to the Customer Layout</h1>
           <p>This is the content area.</p>
+
+          <div className="bg-red-500 text-white p-4">
+            Tailwind đang hoạt động nè!
+          </div>
+          
         </div>
       </Content>
 

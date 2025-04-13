@@ -1,0 +1,1378 @@
+                    <ColorSettingRow
+                      label="theme.advancedMode"
+                      value={advancedMode}
+                      tempValue={tempAdvancedMode}
+                      defaultValue={token.advancedMode}
+                      setTempValue={setTempAdvancedMode}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setAdvancedMode(hexColor))
+                      }
+                      onReset={() => dispatch(setAdvancedMode(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.customPresets"
+                      value={customPresets}
+                      tempValue={tempCustomPresets}
+                      defaultValue={token.customPresets}
+                      setTempValue={setTempCustomPresets}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setCustomPresets(hexColor))
+                      }
+                      onReset={() => dispatch(setCustomPresets(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.themeMode"
+                      value={themeMode}
+                      tempValue={tempThemeMode}
+                      defaultValue={token.themeMode}
+                      setTempValue={setTempThemeMode}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setThemeMode(hexColor))
+                      }
+                      onReset={() => dispatch(setThemeMode(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimary"
+                      value={colorPrimary}
+                      tempValue={tempColorPrimary}
+                      defaultValue={token.colorPrimary}
+                      setTempValue={setTempColorPrimary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryBg"
+                      value={colorPrimaryBg}
+                      tempValue={tempColorPrimaryBg}
+                      defaultValue={token.colorPrimaryBg}
+                      setTempValue={setTempColorPrimaryBg}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryBg(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryBg(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryBgHover"
+                      value={colorPrimaryBgHover}
+                      tempValue={tempColorPrimaryBgHover}
+                      defaultValue={token.colorPrimaryBgHover}
+                      setTempValue={setTempColorPrimaryBgHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryBgHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryBgHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryBorder"
+                      value={colorPrimaryBorder}
+                      tempValue={tempColorPrimaryBorder}
+                      defaultValue={token.colorPrimaryBorder}
+                      setTempValue={setTempColorPrimaryBorder}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryBorder(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryBorder(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryBorderHover"
+                      value={colorPrimaryBorderHover}
+                      tempValue={tempColorPrimaryBorderHover}
+                      defaultValue={token.colorPrimaryBorderHover}
+                      setTempValue={setTempColorPrimaryBorderHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryBorderHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryBorderHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryHover"
+                      value={colorPrimaryHover}
+                      tempValue={tempColorPrimaryHover}
+                      defaultValue={token.colorPrimaryHover}
+                      setTempValue={setTempColorPrimaryHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryActive"
+                      value={colorPrimaryActive}
+                      tempValue={tempColorPrimaryActive}
+                      defaultValue={token.colorPrimaryActive}
+                      setTempValue={setTempColorPrimaryActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryTextHover"
+                      value={colorPrimaryTextHover}
+                      tempValue={tempColorPrimaryTextHover}
+                      defaultValue={token.colorPrimaryTextHover}
+                      setTempValue={setTempColorPrimaryTextHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryTextHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryTextHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryText"
+                      value={colorPrimaryText}
+                      tempValue={tempColorPrimaryText}
+                      defaultValue={token.colorPrimaryText}
+                      setTempValue={setTempColorPrimaryText}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryText(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryText(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorPrimaryTextActive"
+                      value={colorPrimaryTextActive}
+                      tempValue={tempColorPrimaryTextActive}
+                      defaultValue={token.colorPrimaryTextActive}
+                      setTempValue={setTempColorPrimaryTextActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorPrimaryTextActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorPrimaryTextActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccess"
+                      value={colorSuccess}
+                      tempValue={tempColorSuccess}
+                      defaultValue={token.colorSuccess}
+                      setTempValue={setTempColorSuccess}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccess(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccess(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessBg"
+                      value={colorSuccessBg}
+                      tempValue={tempColorSuccessBg}
+                      defaultValue={token.colorSuccessBg}
+                      setTempValue={setTempColorSuccessBg}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessBg(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessBg(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessBgHover"
+                      value={colorSuccessBgHover}
+                      tempValue={tempColorSuccessBgHover}
+                      defaultValue={token.colorSuccessBgHover}
+                      setTempValue={setTempColorSuccessBgHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessBgHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessBgHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessBorder"
+                      value={colorSuccessBorder}
+                      tempValue={tempColorSuccessBorder}
+                      defaultValue={token.colorSuccessBorder}
+                      setTempValue={setTempColorSuccessBorder}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessBorder(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessBorder(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessBorderHover"
+                      value={colorSuccessBorderHover}
+                      tempValue={tempColorSuccessBorderHover}
+                      defaultValue={token.colorSuccessBorderHover}
+                      setTempValue={setTempColorSuccessBorderHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessBorderHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessBorderHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessHover"
+                      value={colorSuccessHover}
+                      tempValue={tempColorSuccessHover}
+                      defaultValue={token.colorSuccessHover}
+                      setTempValue={setTempColorSuccessHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessActive"
+                      value={colorSuccessActive}
+                      tempValue={tempColorSuccessActive}
+                      defaultValue={token.colorSuccessActive}
+                      setTempValue={setTempColorSuccessActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessTextHover"
+                      value={colorSuccessTextHover}
+                      tempValue={tempColorSuccessTextHover}
+                      defaultValue={token.colorSuccessTextHover}
+                      setTempValue={setTempColorSuccessTextHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessTextHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessTextHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessText"
+                      value={colorSuccessText}
+                      tempValue={tempColorSuccessText}
+                      defaultValue={token.colorSuccessText}
+                      setTempValue={setTempColorSuccessText}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessText(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessText(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorSuccessTextActive"
+                      value={colorSuccessTextActive}
+                      tempValue={tempColorSuccessTextActive}
+                      defaultValue={token.colorSuccessTextActive}
+                      setTempValue={setTempColorSuccessTextActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorSuccessTextActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorSuccessTextActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarning"
+                      value={colorWarning}
+                      tempValue={tempColorWarning}
+                      defaultValue={token.colorWarning}
+                      setTempValue={setTempColorWarning}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarning(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarning(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningBg"
+                      value={colorWarningBg}
+                      tempValue={tempColorWarningBg}
+                      defaultValue={token.colorWarningBg}
+                      setTempValue={setTempColorWarningBg}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningBg(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningBg(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningBgHover"
+                      value={colorWarningBgHover}
+                      tempValue={tempColorWarningBgHover}
+                      defaultValue={token.colorWarningBgHover}
+                      setTempValue={setTempColorWarningBgHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningBgHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningBgHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningBorder"
+                      value={colorWarningBorder}
+                      tempValue={tempColorWarningBorder}
+                      defaultValue={token.colorWarningBorder}
+                      setTempValue={setTempColorWarningBorder}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningBorder(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningBorder(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningBorderHover"
+                      value={colorWarningBorderHover}
+                      tempValue={tempColorWarningBorderHover}
+                      defaultValue={token.colorWarningBorderHover}
+                      setTempValue={setTempColorWarningBorderHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningBorderHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningBorderHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningHover"
+                      value={colorWarningHover}
+                      tempValue={tempColorWarningHover}
+                      defaultValue={token.colorWarningHover}
+                      setTempValue={setTempColorWarningHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningActive"
+                      value={colorWarningActive}
+                      tempValue={tempColorWarningActive}
+                      defaultValue={token.colorWarningActive}
+                      setTempValue={setTempColorWarningActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningTextHover"
+                      value={colorWarningTextHover}
+                      tempValue={tempColorWarningTextHover}
+                      defaultValue={token.colorWarningTextHover}
+                      setTempValue={setTempColorWarningTextHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningTextHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningTextHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningText"
+                      value={colorWarningText}
+                      tempValue={tempColorWarningText}
+                      defaultValue={token.colorWarningText}
+                      setTempValue={setTempColorWarningText}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningText(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningText(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorWarningTextActive"
+                      value={colorWarningTextActive}
+                      tempValue={tempColorWarningTextActive}
+                      defaultValue={token.colorWarningTextActive}
+                      setTempValue={setTempColorWarningTextActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorWarningTextActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorWarningTextActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorError"
+                      value={colorError}
+                      tempValue={tempColorError}
+                      defaultValue={token.colorError}
+                      setTempValue={setTempColorError}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorError(hexColor))
+                      }
+                      onReset={() => dispatch(setColorError(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorBg"
+                      value={colorErrorBg}
+                      tempValue={tempColorErrorBg}
+                      defaultValue={token.colorErrorBg}
+                      setTempValue={setTempColorErrorBg}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorBg(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorBg(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorBgHover"
+                      value={colorErrorBgHover}
+                      tempValue={tempColorErrorBgHover}
+                      defaultValue={token.colorErrorBgHover}
+                      setTempValue={setTempColorErrorBgHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorBgHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorBgHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorBorder"
+                      value={colorErrorBorder}
+                      tempValue={tempColorErrorBorder}
+                      defaultValue={token.colorErrorBorder}
+                      setTempValue={setTempColorErrorBorder}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorBorder(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorBorder(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorBorderHover"
+                      value={colorErrorBorderHover}
+                      tempValue={tempColorErrorBorderHover}
+                      defaultValue={token.colorErrorBorderHover}
+                      setTempValue={setTempColorErrorBorderHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorBorderHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorBorderHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorHover"
+                      value={colorErrorHover}
+                      tempValue={tempColorErrorHover}
+                      defaultValue={token.colorErrorHover}
+                      setTempValue={setTempColorErrorHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorActive"
+                      value={colorErrorActive}
+                      tempValue={tempColorErrorActive}
+                      defaultValue={token.colorErrorActive}
+                      setTempValue={setTempColorErrorActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorTextHover"
+                      value={colorErrorTextHover}
+                      tempValue={tempColorErrorTextHover}
+                      defaultValue={token.colorErrorTextHover}
+                      setTempValue={setTempColorErrorTextHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorTextHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorTextHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorText"
+                      value={colorErrorText}
+                      tempValue={tempColorErrorText}
+                      defaultValue={token.colorErrorText}
+                      setTempValue={setTempColorErrorText}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorText(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorText(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorErrorTextActive"
+                      value={colorErrorTextActive}
+                      tempValue={tempColorErrorTextActive}
+                      defaultValue={token.colorErrorTextActive}
+                      setTempValue={setTempColorErrorTextActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorErrorTextActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorErrorTextActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorLink"
+                      value={colorLink}
+                      tempValue={tempColorLink}
+                      defaultValue={token.colorLink}
+                      setTempValue={setTempColorLink}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorLink(hexColor))
+                      }
+                      onReset={() => dispatch(setColorLink(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorLinkHover"
+                      value={colorLinkHover}
+                      tempValue={tempColorLinkHover}
+                      defaultValue={token.colorLinkHover}
+                      setTempValue={setTempColorLinkHover}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorLinkHover(hexColor))
+                      }
+                      onReset={() => dispatch(setColorLinkHover(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorLinkActive"
+                      value={colorLinkActive}
+                      tempValue={tempColorLinkActive}
+                      defaultValue={token.colorLinkActive}
+                      setTempValue={setTempColorLinkActive}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorLinkActive(hexColor))
+                      }
+                      onReset={() => dispatch(setColorLinkActive(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorTextBase"
+                      value={colorTextBase}
+                      tempValue={tempColorTextBase}
+                      defaultValue={token.colorTextBase}
+                      setTempValue={setTempColorTextBase}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorTextBase(hexColor))
+                      }
+                      onReset={() => dispatch(setColorTextBase(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgBase"
+                      value={colorBgBase}
+                      tempValue={tempColorBgBase}
+                      defaultValue={token.colorBgBase}
+                      setTempValue={setTempColorBgBase}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgBase(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgBase(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorText"
+                      value={colorText}
+                      tempValue={tempColorText}
+                      defaultValue={token.colorText}
+                      setTempValue={setTempColorText}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorText(hexColor))
+                      }
+                      onReset={() => dispatch(setColorText(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorTextSecondary"
+                      value={colorTextSecondary}
+                      tempValue={tempColorTextSecondary}
+                      defaultValue={token.colorTextSecondary}
+                      setTempValue={setTempColorTextSecondary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorTextSecondary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorTextSecondary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorTextTertiary"
+                      value={colorTextTertiary}
+                      tempValue={tempColorTextTertiary}
+                      defaultValue={token.colorTextTertiary}
+                      setTempValue={setTempColorTextTertiary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorTextTertiary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorTextTertiary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorTextQuaternary"
+                      value={colorTextQuaternary}
+                      tempValue={tempColorTextQuaternary}
+                      defaultValue={token.colorTextQuaternary}
+                      setTempValue={setTempColorTextQuaternary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorTextQuaternary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorTextQuaternary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBorder"
+                      value={colorBorder}
+                      tempValue={tempColorBorder}
+                      defaultValue={token.colorBorder}
+                      setTempValue={setTempColorBorder}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBorder(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBorder(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBorderSecondary"
+                      value={colorBorderSecondary}
+                      tempValue={tempColorBorderSecondary}
+                      defaultValue={token.colorBorderSecondary}
+                      setTempValue={setTempColorBorderSecondary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBorderSecondary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBorderSecondary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorFill"
+                      value={colorFill}
+                      tempValue={tempColorFill}
+                      defaultValue={token.colorFill}
+                      setTempValue={setTempColorFill}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorFill(hexColor))
+                      }
+                      onReset={() => dispatch(setColorFill(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorFillSecondary"
+                      value={colorFillSecondary}
+                      tempValue={tempColorFillSecondary}
+                      defaultValue={token.colorFillSecondary}
+                      setTempValue={setTempColorFillSecondary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorFillSecondary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorFillSecondary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorFillTertiary"
+                      value={colorFillTertiary}
+                      tempValue={tempColorFillTertiary}
+                      defaultValue={token.colorFillTertiary}
+                      setTempValue={setTempColorFillTertiary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorFillTertiary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorFillTertiary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorFillQuaternary"
+                      value={colorFillQuaternary}
+                      tempValue={tempColorFillQuaternary}
+                      defaultValue={token.colorFillQuaternary}
+                      setTempValue={setTempColorFillQuaternary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorFillQuaternary(hexColor))
+                      }
+                      onReset={() => dispatch(setColorFillQuaternary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgContainer"
+                      value={colorBgContainer}
+                      tempValue={tempColorBgContainer}
+                      defaultValue={token.colorBgContainer}
+                      setTempValue={setTempColorBgContainer}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgContainer(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgContainer(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgElevated"
+                      value={colorBgElevated}
+                      tempValue={tempColorBgElevated}
+                      defaultValue={token.colorBgElevated}
+                      setTempValue={setTempColorBgElevated}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgElevated(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgElevated(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgLayout"
+                      value={colorBgLayout}
+                      tempValue={tempColorBgLayout}
+                      defaultValue={token.colorBgLayout}
+                      setTempValue={setTempColorBgLayout}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgLayout(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgLayout(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgSpotlight"
+                      value={colorBgSpotlight}
+                      tempValue={tempColorBgSpotlight}
+                      defaultValue={token.colorBgSpotlight}
+                      setTempValue={setTempColorBgSpotlight}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgSpotlight(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgSpotlight(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.colorBgMask"
+                      value={colorBgMask}
+                      tempValue={tempColorBgMask}
+                      defaultValue={token.colorBgMask}
+                      setTempValue={setTempColorBgMask}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setColorBgMask(hexColor))
+                      }
+                      onReset={() => dispatch(setColorBgMask(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.sizeMode"
+                      value={sizeMode}
+                      tempValue={tempSizeMode}
+                      defaultValue={token.sizeMode}
+                      setTempValue={setTempSizeMode}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setSizeMode(hexColor))
+                      }
+                      onReset={() => dispatch(setSizeMode(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeSM"
+                      value={fontSizeSM}
+                      tempValue={tempFontSizeSM}
+                      defaultValue={token.fontSizeSM}
+                      setTempValue={setTempFontSizeSM}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeSM(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeSM(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeLG"
+                      value={fontSizeLG}
+                      tempValue={tempFontSizeLG}
+                      defaultValue={token.fontSizeLG}
+                      setTempValue={setTempFontSizeLG}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeLG(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeLG(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeXL"
+                      value={fontSizeXL}
+                      tempValue={tempFontSizeXL}
+                      defaultValue={token.fontSizeXL}
+                      setTempValue={setTempFontSizeXL}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeXL(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeXL(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeHeading1"
+                      value={fontSizeHeading1}
+                      tempValue={tempFontSizeHeading1}
+                      defaultValue={token.fontSizeHeading1}
+                      setTempValue={setTempFontSizeHeading1}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeHeading1(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeHeading1(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeHeading2"
+                      value={fontSizeHeading2}
+                      tempValue={tempFontSizeHeading2}
+                      defaultValue={token.fontSizeHeading2}
+                      setTempValue={setTempFontSizeHeading2}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeHeading2(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeHeading2(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeHeading3"
+                      value={fontSizeHeading3}
+                      tempValue={tempFontSizeHeading3}
+                      defaultValue={token.fontSizeHeading3}
+                      setTempValue={setTempFontSizeHeading3}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeHeading3(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeHeading3(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeHeading4"
+                      value={fontSizeHeading4}
+                      tempValue={tempFontSizeHeading4}
+                      defaultValue={token.fontSizeHeading4}
+                      setTempValue={setTempFontSizeHeading4}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeHeading4(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeHeading4(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSizeHeading5"
+                      value={fontSizeHeading5}
+                      tempValue={tempFontSizeHeading5}
+                      defaultValue={token.fontSizeHeading5}
+                      setTempValue={setTempFontSizeHeading5}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSizeHeading5(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSizeHeading5(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeight"
+                      value={lineHeight}
+                      tempValue={tempLineHeight}
+                      defaultValue={token.lineHeight}
+                      setTempValue={setTempLineHeight}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeight(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeight(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightSM"
+                      value={lineHeightSM}
+                      tempValue={tempLineHeightSM}
+                      defaultValue={token.lineHeightSM}
+                      setTempValue={setTempLineHeightSM}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightSM(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightSM(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightLG"
+                      value={lineHeightLG}
+                      tempValue={tempLineHeightLG}
+                      defaultValue={token.lineHeightLG}
+                      setTempValue={setTempLineHeightLG}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightLG(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightLG(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightHeading1"
+                      value={lineHeightHeading1}
+                      tempValue={tempLineHeightHeading1}
+                      defaultValue={token.lineHeightHeading1}
+                      setTempValue={setTempLineHeightHeading1}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightHeading1(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightHeading1(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightHeading2"
+                      value={lineHeightHeading2}
+                      tempValue={tempLineHeightHeading2}
+                      defaultValue={token.lineHeightHeading2}
+                      setTempValue={setTempLineHeightHeading2}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightHeading2(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightHeading2(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightHeading3"
+                      value={lineHeightHeading3}
+                      tempValue={tempLineHeightHeading3}
+                      defaultValue={token.lineHeightHeading3}
+                      setTempValue={setTempLineHeightHeading3}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightHeading3(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightHeading3(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightHeading4"
+                      value={lineHeightHeading4}
+                      tempValue={tempLineHeightHeading4}
+                      defaultValue={token.lineHeightHeading4}
+                      setTempValue={setTempLineHeightHeading4}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightHeading4(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightHeading4(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.lineHeightHeading5"
+                      value={lineHeightHeading5}
+                      tempValue={tempLineHeightHeading5}
+                      defaultValue={token.lineHeightHeading5}
+                      setTempValue={setTempLineHeightHeading5}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setLineHeightHeading5(hexColor))
+                      }
+                      onReset={() => dispatch(setLineHeightHeading5(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.sizeStep"
+                      value={sizeStep}
+                      tempValue={tempSizeStep}
+                      defaultValue={token.sizeStep}
+                      setTempValue={setTempSizeStep}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setSizeStep(hexColor))
+                      }
+                      onReset={() => dispatch(setSizeStep(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.sizeUnit"
+                      value={sizeUnit}
+                      tempValue={tempSizeUnit}
+                      defaultValue={token.sizeUnit}
+                      setTempValue={setTempSizeUnit}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setSizeUnit(hexColor))
+                      }
+                      onReset={() => dispatch(setSizeUnit(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginXXS"
+                      value={marginXXS}
+                      tempValue={tempMarginXXS}
+                      defaultValue={token.marginXXS}
+                      setTempValue={setTempMarginXXS}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginXXS(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginXXS(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginXS"
+                      value={marginXS}
+                      tempValue={tempMarginXS}
+                      defaultValue={token.marginXS}
+                      setTempValue={setTempMarginXS}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginXS(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginXS(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginSM"
+                      value={marginSM}
+                      tempValue={tempMarginSM}
+                      defaultValue={token.marginSM}
+                      setTempValue={setTempMarginSM}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginSM(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginSM(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.margin"
+                      value={margin}
+                      tempValue={tempMargin}
+                      defaultValue={token.margin}
+                      setTempValue={setTempMargin}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMargin(hexColor))
+                      }
+                      onReset={() => dispatch(setMargin(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginMD"
+                      value={marginMD}
+                      tempValue={tempMarginMD}
+                      defaultValue={token.marginMD}
+                      setTempValue={setTempMarginMD}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginMD(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginMD(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginLG"
+                      value={marginLG}
+                      tempValue={tempMarginLG}
+                      defaultValue={token.marginLG}
+                      setTempValue={setTempMarginLG}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginLG(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginLG(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginXL"
+                      value={marginXL}
+                      tempValue={tempMarginXL}
+                      defaultValue={token.marginXL}
+                      setTempValue={setTempMarginXL}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginXL(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginXL(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.marginXXL"
+                      value={marginXXL}
+                      tempValue={tempMarginXXL}
+                      defaultValue={token.marginXXL}
+                      setTempValue={setTempMarginXXL}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setMarginXXL(hexColor))
+                      }
+                      onReset={() => dispatch(setMarginXXL(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingXXS"
+                      value={paddingXXS}
+                      tempValue={tempPaddingXXS}
+                      defaultValue={token.paddingXXS}
+                      setTempValue={setTempPaddingXXS}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingXXS(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingXXS(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingXS"
+                      value={paddingXS}
+                      tempValue={tempPaddingXS}
+                      defaultValue={token.paddingXS}
+                      setTempValue={setTempPaddingXS}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingXS(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingXS(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingSM"
+                      value={paddingSM}
+                      tempValue={tempPaddingSM}
+                      defaultValue={token.paddingSM}
+                      setTempValue={setTempPaddingSM}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingSM(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingSM(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.padding"
+                      value={padding}
+                      tempValue={tempPadding}
+                      defaultValue={token.padding}
+                      setTempValue={setTempPadding}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPadding(hexColor))
+                      }
+                      onReset={() => dispatch(setPadding(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingMD"
+                      value={paddingMD}
+                      tempValue={tempPaddingMD}
+                      defaultValue={token.paddingMD}
+                      setTempValue={setTempPaddingMD}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingMD(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingMD(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingLG"
+                      value={paddingLG}
+                      tempValue={tempPaddingLG}
+                      defaultValue={token.paddingLG}
+                      setTempValue={setTempPaddingLG}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingLG(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingLG(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.paddingXL"
+                      value={paddingXL}
+                      tempValue={tempPaddingXL}
+                      defaultValue={token.paddingXL}
+                      setTempValue={setTempPaddingXL}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setPaddingXL(hexColor))
+                      }
+                      onReset={() => dispatch(setPaddingXL(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.borderRadius"
+                      value={borderRadius}
+                      tempValue={tempBorderRadius}
+                      defaultValue={token.borderRadius}
+                      setTempValue={setTempBorderRadius}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBorderRadius(hexColor))
+                      }
+                      onReset={() => dispatch(setBorderRadius(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.borderRadiusXS"
+                      value={borderRadiusXS}
+                      tempValue={tempBorderRadiusXS}
+                      defaultValue={token.borderRadiusXS}
+                      setTempValue={setTempBorderRadiusXS}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBorderRadiusXS(hexColor))
+                      }
+                      onReset={() => dispatch(setBorderRadiusXS(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.borderRadiusSM"
+                      value={borderRadiusSM}
+                      tempValue={tempBorderRadiusSM}
+                      defaultValue={token.borderRadiusSM}
+                      setTempValue={setTempBorderRadiusSM}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBorderRadiusSM(hexColor))
+                      }
+                      onReset={() => dispatch(setBorderRadiusSM(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.borderRadiusLG"
+                      value={borderRadiusLG}
+                      tempValue={tempBorderRadiusLG}
+                      defaultValue={token.borderRadiusLG}
+                      setTempValue={setTempBorderRadiusLG}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBorderRadiusLG(hexColor))
+                      }
+                      onReset={() => dispatch(setBorderRadiusLG(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.boxShadow"
+                      value={boxShadow}
+                      tempValue={tempBoxShadow}
+                      defaultValue={token.boxShadow}
+                      setTempValue={setTempBoxShadow}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBoxShadow(hexColor))
+                      }
+                      onReset={() => dispatch(setBoxShadow(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.boxShadowSecondary"
+                      value={boxShadowSecondary}
+                      tempValue={tempBoxShadowSecondary}
+                      defaultValue={token.boxShadowSecondary}
+                      setTempValue={setTempBoxShadowSecondary}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setBoxShadowSecondary(hexColor))
+                      }
+                      onReset={() => dispatch(setBoxShadowSecondary(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.wireframe"
+                      value={wireframe}
+                      tempValue={tempWireframe}
+                      defaultValue={token.wireframe}
+                      setTempValue={setTempWireframe}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setWireframe(hexColor))
+                      }
+                      onReset={() => dispatch(setWireframe(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontSize"
+                      value={fontSize}
+                      tempValue={tempFontSize}
+                      defaultValue={token.fontSize}
+                      setTempValue={setTempFontSize}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontSize(hexColor))
+                      }
+                      onReset={() => dispatch(setFontSize(null))}
+                      presets={preserColor}
+                      t={t}
+                    />
+                    <ColorSettingRow
+                      label="theme.fontFamily"
+                      value={fontFamily}
+                      tempValue={tempFontFamily}
+                      defaultValue={token.fontFamily}
+                      setTempValue={setTempFontFamily}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(setFontFamily(hexColor))
+                      }
+                      onReset={() => dispatch(setFontFamily(null))}
+                      presets={preserColor}
+                      t={t}
+                    />

@@ -1,0 +1,13 @@
+                    <ColorSettingRow
+                      label="theme.{{name}}"
+                      value={{{name}}}
+                      tempValue={temp{{upper}}}
+                      defaultValue={token.{{name}}}
+                      setTempValue={setTemp{{upper}}}
+                      onChangeComplete={(hexColor) =>
+                        dispatch(set{{upper}}(hexColor))
+                      }
+                      onReset={() => dispatch(set{{upper}}(null))}
+                      presets={preserColor}
+                      t={t}
+                    />

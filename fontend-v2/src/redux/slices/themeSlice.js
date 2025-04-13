@@ -6,131 +6,132 @@ const savedTheme = JSON.parse(localStorage.getItem("theme")) || {};
 
 const initialState = {
   // che do nang cao
-  advancedMode: savedTheme.advancedMode || false,
-  customPresets: savedTheme.customPresets || [],
-  //
-  themeMode: savedTheme.themeMode || "light",
+  advancedMode:  false,
+  customPresets:  [],
+  themeMode: "light",
 
-  colorPrimary: savedTheme.colorPrimary || null,
-  colorPrimaryBg: savedTheme.colorPrimaryBg || null,
-  colorPrimaryBgHover: savedTheme.colorPrimaryBgHover || null,
-  colorPrimaryBorder: savedTheme.colorPrimaryBorder || null,
-  colorPrimaryBorderHover: savedTheme.colorPrimaryBorderHover || null,
-  colorPrimaryHover: savedTheme.colorPrimaryHover || null,
-  colorPrimaryActive: savedTheme.colorPrimaryActive || null,
-  colorPrimaryTextHover: savedTheme.colorPrimaryTextHover || null,
-  colorPrimaryText: savedTheme.colorPrimaryText || null,
-  colorPrimaryTextActive: savedTheme.colorPrimaryTextActive || null,
+  colorPrimary: null,
+  colorPrimaryBg:  null,
+  colorPrimaryBgHover:  null,
+  colorPrimaryBorder:  null,
+  colorPrimaryBorderHover: null,
+  colorPrimaryHover: null,
+  colorPrimaryActive: null,
+  colorPrimaryTextHover: null,
+  colorPrimaryText: null,
+  colorPrimaryTextActive: null,
 
-  colorSuccess: savedTheme.colorSuccess || null,
-  colorSuccessBg: savedTheme.colorSuccessBg || null,
-  colorSuccessBgHover: savedTheme.colorSuccessBgHover || null,
-  colorSuccessBorder: savedTheme.colorSuccessBorder || null,
-  colorSuccessBorderHover: savedTheme.colorSuccessBorderHover || null,
-  colorSuccessHover: savedTheme.colorSuccessHover || null,
-  colorSuccessActive: savedTheme.colorSuccessActive || null,
-  colorSuccessTextHover: savedTheme.colorSuccessTextHover || null,
-  colorSuccessText: savedTheme.colorSuccessText || null,
-  colorSuccessTextActive: savedTheme.colorSuccessTextActive || null,
+  colorSuccess: null,
+  colorSuccessBg: null,
+  colorSuccessBgHover: null,
+  colorSuccessBorder: null,
+  colorSuccessBorderHover: null,
+  colorSuccessHover: null,
+  colorSuccessActive: null,
+  colorSuccessTextHover: null,
+  colorSuccessText: null,
+  colorSuccessTextActive: null,
 
-  colorWarning: savedTheme.colorWarning || null,
-  colorWarningBg: savedTheme.colorWarningBg || null,
-  colorWarningBgHover: savedTheme.colorWarningBgHover || null,
-  colorWarningBorder: savedTheme.colorWarningBorder || null,
-  colorWarningBorderHover: savedTheme.colorWarningBorderHover || null,
-  colorWarningHover: savedTheme.colorWarningHover || null,
-  colorWarningActive: savedTheme.colorWarningActive || null,
-  colorWarningTextHover: savedTheme.colorWarningTextHover || null,
-  colorWarningText: savedTheme.colorWarningText || null,
-  colorWarningTextActive: savedTheme.colorWarningTextActive || null,
+  colorWarning: null,
+  colorWarningBg: null,
+  colorWarningBgHover: null,
+  colorWarningBorder: null,
+  colorWarningBorderHover: null,
+  colorWarningHover: null,
+  colorWarningActive: null,
+  colorWarningTextHover: null,
+  colorWarningText: null,
+  colorWarningTextActive: null,
 
-  colorError: savedTheme.colorError || null,
-  colorErrorBg: savedTheme.colorErrorBg || null,
-  colorErrorBgHover: savedTheme.colorErrorBgHover || null,
-  colorErrorBorder: savedTheme.colorErrorBorder || null,
-  colorErrorBorderHover: savedTheme.colorErrorBorderHover || null,
-  colorErrorHover: savedTheme.colorErrorHover || null,
-  colorErrorActive: savedTheme.colorErrorActive || null,
-  colorErrorTextHover: savedTheme.colorErrorTextHover || null,
-  colorErrorText: savedTheme.colorErrorText || null,
-  colorErrorTextActive: savedTheme.colorErrorTextActive || null,
+  colorError: null,
+  colorErrorBg: null,
+  colorErrorBgHover: null,
+  colorErrorBorder: null,
+  colorErrorBorderHover: null,
+  colorErrorHover: null,
+  colorErrorActive: null,
+  colorErrorTextHover: null,
+  colorErrorText: null,
+  colorErrorTextActive: null,
 
-  colorLink: savedTheme.colorLink || null,
-  colorLinkHover: savedTheme.colorLinkHover || null,
-  colorLinkActive: savedTheme.colorLinkActive || null,
+  colorInfo: null,
 
-  colorTextBase: savedTheme.colorTextBase || null,
-  colorBgBase: savedTheme.colorBgBase || null,
+  colorLink: null,
+  colorLinkHover: null,
+  colorLinkActive: null,
 
-  colorText: savedTheme.colorText || null,
-  colorTextSecondary: savedTheme.colorTextSecondary || null,
-  colorTextTertiary: savedTheme.colorTextTertiary || null,
-  colorTextQuaternary: savedTheme.colorTextQuaternary || null,
+  colorTextBase: null,
+  colorBgBase: null,
 
-  colorBorder: savedTheme.colorBorder || null,
-  colorBorderSecondary: savedTheme.colorBorderSecondary || null,
+  colorText: null,
+  colorTextSecondary: null,
+  colorTextTertiary: null,
+  colorTextQuaternary: null,
 
-  colorFill: savedTheme.colorFill || null,
-  colorFillSecondary: savedTheme.colorFillSecondary || null,
-  colorFillTertiary: savedTheme.colorFillTertiary || null,
-  colorFillQuaternary: savedTheme.colorFillQuaternary || null,
+  colorBorder: null,
+  colorBorderSecondary: null,
 
-  colorBgContainer: savedTheme.colorBgContainer || null,
-  colorBgElevated: savedTheme.colorBgElevated || null,
-  colorBgLayout: savedTheme.colorBgLayout || null,
-  colorBgSpotlight: savedTheme.colorBgSpotlight || null,
-  colorBgMask: savedTheme.colorBgMask || null,
+  colorFill: null,
+  colorFillSecondary: null,
+  colorFillTertiary: null,
+  colorFillQuaternary: null,
 
-  sizeMode: savedTheme.sizeMode || null,
-  fontSizeSM: savedTheme.fontSizeSM || null,
-  fontSizeLG: savedTheme.fontSizeLG || null,
-  fontSizeXL: savedTheme.fontSizeXL || null,
-  fontSizeHeading1: savedTheme.fontSizeHeading1 || null,
-  fontSizeHeading2: savedTheme.fontSizeHeading2 || null,
-  fontSizeHeading3: savedTheme.fontSizeHeading3 || null,
-  fontSizeHeading4: savedTheme.fontSizeHeading4 || null,
-  fontSizeHeading5: savedTheme.fontSizeHeading5 || null,
-  lineHeight: savedTheme.lineHeight || null,
-  lineHeightSM: savedTheme.lineHeightSM || null,
-  lineHeightLG: savedTheme.lineHeightLG || null,
-  lineHeightHeading1: savedTheme.lineHeightHeading1 || null,
-  lineHeightHeading2: savedTheme.lineHeightHeading2 || null,
-  lineHeightHeading3: savedTheme.lineHeightHeading3 || null,
-  lineHeightHeading4: savedTheme.lineHeightHeading4 || null,
-  lineHeightHeading5: savedTheme.lineHeightHeading5 || null,
+  colorBgContainer: null,
+  colorBgElevated: null,
+  colorBgLayout: null,
+  colorBgSpotlight: null,
+  colorBgMask: null,
 
-  sizeStep: savedTheme.sizeStep || null,
-  sizeUnit: savedTheme.sizeUnit || null,
+  sizeMode: null,
+  fontSizeSM: null,
+  fontSizeLG: null,
+  fontSizeXL: null,
+  fontSizeHeading1: null,
+  fontSizeHeading2: null,
+  fontSizeHeading3: null,
+  fontSizeHeading4: null,
+  fontSizeHeading5: null,
+  lineHeight: null,
+  lineHeightSM: null,
+  lineHeightLG: null,
+  lineHeightHeading1: null,
+  lineHeightHeading2: null,
+  lineHeightHeading3: null,
+  lineHeightHeading4: null,
+  lineHeightHeading5: null,
 
-  marginXXS: savedTheme.marginXXS || null,
-  marginXS: savedTheme.marginXS || null,
-  marginSM: savedTheme.marginSM || null,
-  margin: savedTheme.margin || null,
-  marginMD: savedTheme.marginMD || null,
-  marginLG: savedTheme.marginLG || null,
-  marginXL: savedTheme.marginXL || null,
-  marginXXL: savedTheme.marginXXL || null,
+  sizeStep: null,
+  sizeUnit: null,
 
-  paddingXXS: savedTheme.paddingXXS || null,
-  paddingXS: savedTheme.paddingXS || null,
-  paddingSM: savedTheme.paddingSM || null,
-  padding: savedTheme.padding || null,
-  paddingMD: savedTheme.paddingMD || null,
-  paddingLG: savedTheme.paddingLG || null,
-  paddingXL: savedTheme.paddingXL || null,
+  marginXXS: null,
+  marginXS: null,
+  marginSM: null,
+  margin: null,
+  marginMD: null,
+  marginLG: null,
+  marginXL: null,
+  marginXXL: null,
 
-  borderRadius: savedTheme.borderRadius || null,
-  borderRadiusXS: savedTheme.borderRadiusXS || null,
-  borderRadiusSM: savedTheme.borderRadiusSM || null,
-  borderRadiusLG: savedTheme.borderRadiusLG || null,
+  paddingXXS: null,
+  paddingXS: null,
+  paddingSM: null,
+  padding: null,
+  paddingMD: null,
+  paddingLG: null,
+  paddingXL: null,
 
-  boxShadow: savedTheme.boxShadow || null,
-  boxShadowSecondary: savedTheme.boxShadowSecondary || null,
+  borderRadius: null,
+  borderRadiusXS: null,
+  borderRadiusSM: null,
+  borderRadiusLG: null,
 
-  wireframe: savedTheme.wireframe || false,
+  boxShadow: null,
+  boxShadowSecondary: null,
 
-  fontSize: savedTheme.fontSize || 14,
-  fontFamily: savedTheme.fontFamily || "Roboto",
+  wireframe: false,
+
+  fontSize: null,
+  fontFamily: "Roboto"
 };
 
 const saveToLocalStorage = (state) => {
@@ -142,6 +143,10 @@ const themeSlice = createSlice({
   initialState,
   reducers: {
     //
+    initTheme: (state, action) => {
+      Object.assign(state, action.payload);
+      saveToLocalStorage(state);
+    },
     setAdvancedMode: (state, action) => {
       state.advancedMode = action.payload;
       saveToLocalStorage(state);
@@ -329,6 +334,10 @@ const themeSlice = createSlice({
     },
     setColorErrorTextActive: (state, action) => {
       state.colorErrorTextActive = action.payload;
+      saveToLocalStorage(state);
+    },
+    setColorInfo: (state, action) => {
+      state.colorInfo = action.payload;
       saveToLocalStorage(state);
     },
     setColorLink: (state, action) => {
@@ -583,11 +592,12 @@ const themeSlice = createSlice({
       state.fontFamily = action.payload;
       loadGoogleFont(action.payload);
       saveToLocalStorage(state);
-    },
+    }
   },
 });
 
 export const {
+  initTheme,
   setAdvancedMode,
   saveCustomPresets,
   removeCustomPreset,
@@ -632,6 +642,7 @@ export const {
   setColorErrorTextHover,
   setColorErrorText,
   setColorErrorTextActive,
+  setColorInfo,
   setColorLink,
   setColorLinkHover,
   setColorLinkActive,
@@ -694,7 +705,7 @@ export const {
   setBoxShadowSecondary,
   setWireframe,
   setFontSize,
-  setFontFamily,
+  setFontFamily
 } = themeSlice.actions;
 
 export default themeSlice.reducer;

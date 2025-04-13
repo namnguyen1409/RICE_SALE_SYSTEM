@@ -1,0 +1,13 @@
+{
+    "code": "en-US",
+    "name": "English (United States)",
+    "flag": "🇺🇸",
+    "greeting": "Hello",
+    "login": "Login",
+    "theme.language" : "Language",
+    "theme.customizer" : "Theme Customizer",
+    "theme.mode" : "Theme Mode",
+    "theme.mode.light" : "Light",
+    "theme.mode.dark" : "Dark",
+    "theme.themeAndLanguage" : "Theme & Language"
+}
