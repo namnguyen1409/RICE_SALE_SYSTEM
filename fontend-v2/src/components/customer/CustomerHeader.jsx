@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Button } from "antd";
 import { SettingOutlined } from "@ant-design/icons";
-import ThemeCustomizer from "../common/ThemeCustomizer";
+import ThemeCustomizer from "../common/ThemeCustomizer/ThemeCustomizer";
 
 const CustomerHeader = () => {
     const [customizerOpen, setCustomizerOpen] = useState(false);

@@ -7,7 +7,7 @@ import '@ant-design/v5-patch-for-react-19';
 
 // libraries
 import store from './redux/store';
-import ThemeProviderWrapper from './components/common/ThemeProviderWrapper.jsx'
+import ThemeProviderWrapper from './components/common/ThemeCustomizer/ThemeProviderWrapper.jsx'
 import { loadSavedTheme } from './utils/themeLoader.js'
 import { initTheme } from './redux/slices/themeSlice.js'
 

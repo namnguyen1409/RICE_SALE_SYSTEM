@@ -2,7 +2,7 @@
 import { ConfigProvider, theme as antdTheme } from "antd";
 import React, { useEffect, useMemo } from "react";
 import { useSelector } from "react-redux";
-import { loadGoogleFont } from "../../utils/loadGoogleFont";
+import { loadGoogleFont } from "../../../utils/loadGoogleFont";
 
 const ThemeProviderWrapper = ({ children }) => {
   const themeState = useSelector((state) => state.theme);

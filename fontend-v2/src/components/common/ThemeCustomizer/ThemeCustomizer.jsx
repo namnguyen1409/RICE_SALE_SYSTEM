@@ -17,7 +17,7 @@ import {
 } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { memo, useEffect, useMemo, useState } from "react";
-import useGoogleFonts from "../../hooks/useGoogleFonts";
+import useGoogleFonts from "../../../hooks/useGoogleFonts";
 import {
   CompressOutlined,
   ExpandOutlined,
@@ -93,15 +93,17 @@ import {
   setColorFillQuaternary,
   setSizeMode,
   initTheme,
-} from "../../redux/slices/themeSlice";
-import { availableLanguages } from "../../i18n";
+} from "../../../redux/slices/themeSlice";
+import { availableLanguages } from "../../../i18n";
 import { useTranslation } from "react-i18next";
 import { theme } from "antd";
 import "flag-icon-css/css/flag-icons.min.css";
-import { changeLanguage } from "../../redux/slices/languageSlice";
+import { changeLanguage } from "../../../redux/slices/languageSlice";
 import Link from "antd/es/typography/Link";
 import ColorSettingRow from "./ColorSettingRow";
-import { WarningContext } from "antd/es/_util/warning";
+import MainColorPickerRow from "./MainColorPickerRow";
+import { setTempByKey } from "../../../redux/slices/tempThemeSlice";
+
 
 const { Title, Text } = Typography;
 
@@ -114,6 +116,7 @@ const ThemeCustomizer = ({ open, onClose }) => {
   const { token } = theme.useToken();
 
   const { ...themeState } = useSelector((state) => state.theme);
+
   const language = useSelector((state) => state.language.currentLang);
 
   const [loading, setLoading] = useState(true);
@@ -444,43 +447,17 @@ const ThemeCustomizer = ({ open, onClose }) => {
           variant="borderless"
           style={{ boxShadow: token.boxShadow }}
         >
-          <Row align="middle" justify="space-between" className="mb-2">
-            <Col>
-              <Text strong>
-                {t("theme.colorPrimary")}
-                {themeState.colorPrimary && (
-                  <Link
-                    className="ml-2"
-                    onClick={() => {
-                      dispatch(setColorPrimary(null));
-                      setTempColorPrimary(null);
-                    }}
-                  >
-                    {t("theme.reset")}
-                  </Link>
-                )}
-              </Text>
-            </Col>
-            <Col>
-              <ColorPicker
-                style={{ padding: "4px" }}
-                defaultValue={token.colorPrimary}
-                value={tempColorPrimary ?? token.colorPrimary}
-                presets={preserColor}
-                color={token.colorPrimary}
-                onChange={(color) => {
-                  setTempColorPrimary(color.toHexString());
-                }}
-                onChangeComplete={(color) => {
-                  const hexColor = color.toHexString();
-                  console.log("Selected:", hexColor);
-                  dispatch(setColorPrimary(hexColor));
-                  setTempColorPrimary(hexColor);
-                }}
-                showText
-              />
-            </Col>
-          </Row>
+          <MainColorPickerRow 
+            label="theme.colorPrimary"
+            value={themeState.colorPrimary}
+            defaultValue={token.colorPrimary}
+            onChangeComplete={(hexColor) =>
+              dispatch(setColorPrimary(hexColor))
+            }
+            onReset={() => dispatch(setColorPrimary(null))}
+            presets={preserColor}
+            t={t}
+          />
           {themeState.advancedMode && (
             <Collapse
               bordered={false}

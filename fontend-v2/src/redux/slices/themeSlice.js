@@ -142,14 +142,11 @@ const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
-    //
     initTheme: (state, action) => {
       Object.assign(state, action.payload);
-      saveToLocalStorage(state);
     },
     setAdvancedMode: (state, action) => {
       state.advancedMode = action.payload;
-      saveToLocalStorage(state);
     },
     saveCustomPresets: (state, action) => {
       const { name } = action.payload;
@@ -163,435 +160,328 @@ const themeSlice = createSlice({
         // Add a new preset
         state.customPresets.push(action.payload);
       }
-      saveToLocalStorage(state);
     },
     removeCustomPreset: (state, action) => {
       const { name } = action.payload;
       state.customPresets = state.customPresets.filter(
         (preset) => preset.name !== name
       );
-      saveToLocalStorage(state);
     },
     setThemeMode: (state, action) => {
       state.themeMode = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimary: (state, action) => {
       state.colorPrimary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryBg: (state, action) => {
       state.colorPrimaryBg = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryBgHover: (state, action) => {
       state.colorPrimaryBgHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryBorder: (state, action) => {
       state.colorPrimaryBorder = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryBorderHover: (state, action) => {
       state.colorPrimaryBorderHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryHover: (state, action) => {
       state.colorPrimaryHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryActive: (state, action) => {
       state.colorPrimaryActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryTextHover: (state, action) => {
       state.colorPrimaryTextHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryText: (state, action) => {
       state.colorPrimaryText = action.payload;
-      saveToLocalStorage(state);
     },
     setColorPrimaryTextActive: (state, action) => {
       state.colorPrimaryTextActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccess: (state, action) => {
       state.colorSuccess = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessBg: (state, action) => {
       state.colorSuccessBg = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessBgHover: (state, action) => {
       state.colorSuccessBgHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessBorder: (state, action) => {
       state.colorSuccessBorder = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessBorderHover: (state, action) => {
       state.colorSuccessBorderHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessHover: (state, action) => {
       state.colorSuccessHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessActive: (state, action) => {
       state.colorSuccessActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessTextHover: (state, action) => {
       state.colorSuccessTextHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessText: (state, action) => {
       state.colorSuccessText = action.payload;
-      saveToLocalStorage(state);
     },
     setColorSuccessTextActive: (state, action) => {
       state.colorSuccessTextActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarning: (state, action) => {
       state.colorWarning = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningBg: (state, action) => {
       state.colorWarningBg = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningBgHover: (state, action) => {
       state.colorWarningBgHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningBorder: (state, action) => {
       state.colorWarningBorder = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningBorderHover: (state, action) => {
       state.colorWarningBorderHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningHover: (state, action) => {
       state.colorWarningHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningActive: (state, action) => {
       state.colorWarningActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningTextHover: (state, action) => {
       state.colorWarningTextHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningText: (state, action) => {
       state.colorWarningText = action.payload;
-      saveToLocalStorage(state);
     },
     setColorWarningTextActive: (state, action) => {
       state.colorWarningTextActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorError: (state, action) => {
       state.colorError = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorBg: (state, action) => {
       state.colorErrorBg = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorBgHover: (state, action) => {
       state.colorErrorBgHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorBorder: (state, action) => {
       state.colorErrorBorder = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorBorderHover: (state, action) => {
       state.colorErrorBorderHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorHover: (state, action) => {
       state.colorErrorHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorActive: (state, action) => {
       state.colorErrorActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorTextHover: (state, action) => {
       state.colorErrorTextHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorText: (state, action) => {
       state.colorErrorText = action.payload;
-      saveToLocalStorage(state);
     },
     setColorErrorTextActive: (state, action) => {
       state.colorErrorTextActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorInfo: (state, action) => {
       state.colorInfo = action.payload;
-      saveToLocalStorage(state);
     },
     setColorLink: (state, action) => {
       state.colorLink = action.payload;
-      saveToLocalStorage(state);
     },
     setColorLinkHover: (state, action) => {
       state.colorLinkHover = action.payload;
-      saveToLocalStorage(state);
     },
     setColorLinkActive: (state, action) => {
       state.colorLinkActive = action.payload;
-      saveToLocalStorage(state);
     },
     setColorTextBase: (state, action) => {
       state.colorTextBase = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgBase: (state, action) => {
       state.colorBgBase = action.payload;
-      saveToLocalStorage(state);
     },
     setColorText: (state, action) => {
       state.colorText = action.payload;
-      saveToLocalStorage(state);
     },
     setColorTextSecondary: (state, action) => {
       state.colorTextSecondary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorTextTertiary: (state, action) => {
       state.colorTextTertiary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorTextQuaternary: (state, action) => {
       state.colorTextQuaternary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBorder: (state, action) => {
       state.colorBorder = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBorderSecondary: (state, action) => {
       state.colorBorderSecondary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorFill: (state, action) => {
       state.colorFill = action.payload;
-      saveToLocalStorage(state);
     },
     setColorFillSecondary: (state, action) => {
       state.colorFillSecondary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorFillTertiary: (state, action) => {
       state.colorFillTertiary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorFillQuaternary: (state, action) => {
       state.colorFillQuaternary = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgContainer: (state, action) => {
       state.colorBgContainer = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgElevated: (state, action) => {
       state.colorBgElevated = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgLayout: (state, action) => {
       state.colorBgLayout = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgSpotlight: (state, action) => {
       state.colorBgSpotlight = action.payload;
-      saveToLocalStorage(state);
     },
     setColorBgMask: (state, action) => {
       state.colorBgMask = action.payload;
-      saveToLocalStorage(state);
     },
     setSizeMode: (state, action) => {
       state.sizeMode = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeSM: (state, action) => {
       state.fontSizeSM = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeLG: (state, action) => {
       state.fontSizeLG = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeXL: (state, action) => {
       state.fontSizeXL = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeHeading1: (state, action) => {
       state.fontSizeHeading1 = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeHeading2: (state, action) => {
       state.fontSizeHeading2 = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeHeading3: (state, action) => {
       state.fontSizeHeading3 = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeHeading4: (state, action) => {
       state.fontSizeHeading4 = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSizeHeading5: (state, action) => {
       state.fontSizeHeading5 = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeight: (state, action) => {
       state.lineHeight = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightSM: (state, action) => {
       state.lineHeightSM = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightLG: (state, action) => {
       state.lineHeightLG = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightHeading1: (state, action) => {
       state.lineHeightHeading1 = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightHeading2: (state, action) => {
       state.lineHeightHeading2 = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightHeading3: (state, action) => {
       state.lineHeightHeading3 = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightHeading4: (state, action) => {
       state.lineHeightHeading4 = action.payload;
-      saveToLocalStorage(state);
     },
     setLineHeightHeading5: (state, action) => {
       state.lineHeightHeading5 = action.payload;
-      saveToLocalStorage(state);
     },
     setSizeStep: (state, action) => {
       state.sizeStep = action.payload;
-      saveToLocalStorage(state);
     },
     setSizeUnit: (state, action) => {
       state.sizeUnit = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginXXS: (state, action) => {
       state.marginXXS = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginXS: (state, action) => {
       state.marginXS = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginSM: (state, action) => {
       state.marginSM = action.payload;
-      saveToLocalStorage(state);
     },
     setMargin: (state, action) => {
       state.margin = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginMD: (state, action) => {
       state.marginMD = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginLG: (state, action) => {
       state.marginLG = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginXL: (state, action) => {
       state.marginXL = action.payload;
-      saveToLocalStorage(state);
     },
     setMarginXXL: (state, action) => {
       state.marginXXL = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingXXS: (state, action) => {
       state.paddingXXS = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingXS: (state, action) => {
       state.paddingXS = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingSM: (state, action) => {
       state.paddingSM = action.payload;
-      saveToLocalStorage(state);
     },
     setPadding: (state, action) => {
       state.padding = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingMD: (state, action) => {
       state.paddingMD = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingLG: (state, action) => {
       state.paddingLG = action.payload;
-      saveToLocalStorage(state);
     },
     setPaddingXL: (state, action) => {
       state.paddingXL = action.payload;
-      saveToLocalStorage(state);
     },
     setBorderRadius: (state, action) => {
       state.borderRadius = action.payload;
-      saveToLocalStorage(state);
     },
     setBorderRadiusXS: (state, action) => {
       state.borderRadiusXS = action.payload;
-      saveToLocalStorage(state);
     },
     setBorderRadiusSM: (state, action) => {
       state.borderRadiusSM = action.payload;
-      saveToLocalStorage(state);
     },
     setBorderRadiusLG: (state, action) => {
       state.borderRadiusLG = action.payload;
-      saveToLocalStorage(state);
     },
     setBoxShadow: (state, action) => {
       state.boxShadow = action.payload;
-      saveToLocalStorage(state);
     },
     setBoxShadowSecondary: (state, action) => {
       state.boxShadowSecondary = action.payload;
-      saveToLocalStorage(state);
     },
     setWireframe: (state, action) => {
       state.wireframe = action.payload;
-      saveToLocalStorage(state);
     },
     setFontSize: (state, action) => {
       state.fontSize = action.payload;
-      saveToLocalStorage(state);
     },
     setFontFamily: (state, action) => {
       state.fontFamily = action.payload;
       loadGoogleFont(action.payload);
-      saveToLocalStorage(state);
     }
   },
 });
