@@ -103,6 +103,8 @@ import Link from "antd/es/typography/Link";
 import ColorSettingRow from "./ColorSettingRow";
 import MainColorPickerRow from "./MainColorPickerRow";
 import { setTempByKey } from "../../../redux/slices/tempThemeSlice";
+import CustomerSegmented from "./CustomSegmented";
+import ThemeChangePopup from "./ThemeChangePopup";
 
 
 const { Title, Text } = Typography;
@@ -258,6 +260,22 @@ const ThemeCustomizer = ({ open, onClose }) => {
     },
   ];
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleThemeChange = (val) => {
+    setShowPopup(true);
+  
+    // Delay để người dùng thấy hiệu ứng
+    setTimeout(() => {
+      dispatch(setThemeMode(val));
+    }, 200);
+  
+    // Ẩn popup sau hiệu ứng
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 1000);
+  };
+
   const [fontSearch, setFontSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubset, setSelectedSubset] = useState(null);
@@ -304,7 +322,7 @@ const ThemeCustomizer = ({ open, onClose }) => {
             </Title>
           </Col>
           <Col>
-            <Segmented
+            <CustomerSegmented 
               size="normal"
               value={themeState.advancedMode}
               onChange={(val) => dispatch(setAdvancedMode(val))}
@@ -319,6 +337,22 @@ const ThemeCustomizer = ({ open, onClose }) => {
                 },
               ]}
             />
+
+            {/* <Segmented
+              size="normal"
+              value={themeState.advancedMode}
+              onChange={(val) => dispatch(setAdvancedMode(val))}
+              options={[
+                {
+                  label: t("theme.basic"),
+                  value: false,
+                },
+                {
+                  label: t("theme.advanced"),
+                  value: true,
+                },
+              ]}
+            /> */}
           </Col>
         </Row>
       }
@@ -389,7 +423,7 @@ const ThemeCustomizer = ({ open, onClose }) => {
               <Segmented
                 size="normal"
                 value={themeState.themeMode}
-                onChange={(val) => dispatch(setThemeMode(val))}
+                onChange={handleThemeChange}
                 options={[
                   {
                     label: <SunFilled />,
@@ -402,6 +436,7 @@ const ThemeCustomizer = ({ open, onClose }) => {
                 ]}
               />
             </Col>
+            <ThemeChangePopup show={showPopup} mode={themeState.themeMode === "light" ? "dark" : "light"} />
           </Row>
 
           <Row align="middle" justify="space-between" style={{ marginTop: 24 }}>
@@ -449,8 +484,8 @@ const ThemeCustomizer = ({ open, onClose }) => {
         >
           <MainColorPickerRow 
             label="theme.colorPrimary"
-            value={themeState.colorPrimary}
-            defaultValue={token.colorPrimary}
+            stateValue={themeState.colorPrimary}
+            tokenValue={token.colorPrimary}
             onChangeComplete={(hexColor) =>
               dispatch(setColorPrimary(hexColor))
             }

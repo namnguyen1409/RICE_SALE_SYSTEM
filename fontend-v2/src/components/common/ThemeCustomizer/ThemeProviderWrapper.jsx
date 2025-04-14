@@ -6,6 +6,7 @@ import { loadGoogleFont } from "../../../utils/loadGoogleFont";
 
 const ThemeProviderWrapper = ({ children }) => {
   const themeState = useSelector((state) => state.theme);
+  const loadedFonts = new Set();
 
   const filteredToken = useMemo(() => {
     return Object.fromEntries(
@@ -32,8 +33,9 @@ const ThemeProviderWrapper = ({ children }) => {
   }), [filteredToken, algorithms]);
 
   useEffect(() => {
-    if (themeState.fontFamily) {
+    if (themeState.fontFamily && !loadedFonts.has(themeState.fontFamily)) {
       loadGoogleFont(themeState.fontFamily);
+      loadedFonts.add(themeState.fontFamily);
     }
   }, [themeState.fontFamily]);
 

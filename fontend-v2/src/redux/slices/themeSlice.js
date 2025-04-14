@@ -131,7 +131,8 @@ const initialState = {
   wireframe: false,
 
   fontSize: null,
-  fontFamily: "Roboto"
+  fontFamily: "Roboto",
+  isChange: false,
 };
 
 const saveToLocalStorage = (state) => {
@@ -482,7 +483,10 @@ const themeSlice = createSlice({
     setFontFamily: (state, action) => {
       state.fontFamily = action.payload;
       loadGoogleFont(action.payload);
-    }
+    },
+    setChange: (state, action) => {
+      state.isChange = action.payload;
+    },
   },
 });
 
@@ -595,7 +599,8 @@ export const {
   setBoxShadowSecondary,
   setWireframe,
   setFontSize,
-  setFontFamily
+  setFontFamily,
+  setChange,
 } = themeSlice.actions;
 
 export default themeSlice.reducer;

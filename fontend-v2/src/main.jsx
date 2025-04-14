@@ -15,11 +15,11 @@ const savedTheme = loadSavedTheme();
 store.dispatch(initTheme(savedTheme));
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <Provider store={store}>
       <ThemeProviderWrapper>
       <App />
       </ThemeProviderWrapper>
-    </Provider>
-  </StrictMode>,
+    </Provider>,
+  // </StrictMode>,
 )
