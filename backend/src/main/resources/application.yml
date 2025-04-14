@@ -14,7 +14,7 @@ spring:
       ddl-auto: update
 api:
   google-font:
-    key: AIzaSyBFrVd78WDzOu4181HeyxnaFUMoMgoMPbI
+    key: ${GOOGLE_FONT_API_KEY}
 
 
 app:
