@@ -19,7 +19,7 @@ class FontServiceImpl  (
     private val webClient: WebClient,
     @Value("\${api.google-font.key}") val apiKey: String,
 
-) : FontService {
+    ) : FontService {
 
     private val logger: Logger = LoggerFactory.getLogger(FontServiceImpl::class.java)
 

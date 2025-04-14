@@ -28,8 +28,7 @@ class DataInitializer(
     private val accountRepository: AccountRepository,
     private val passwordEncoder: PasswordEncoder,
     private val fontRepository: FontRepository,
-    private val fontService: FontService,
-
+    private val fontService: FontService
     ) {
 
     private val logger: Logger = LoggerFactory.getLogger(DataInitializer::class.java)
