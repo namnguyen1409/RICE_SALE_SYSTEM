@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component
 
 
 @Component
-class RefreshFontSchedule (
+class RefreshFontSchedule(
     private val fontService: FontService
-){
-
+) {
     @Scheduled(cron = "0 0 0 7 * ?")
     fun refreshFonts() = runBlocking {
         fontService.refreshFonts()

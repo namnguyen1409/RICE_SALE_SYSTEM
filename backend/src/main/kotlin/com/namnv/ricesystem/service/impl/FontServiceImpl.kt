@@ -18,7 +18,6 @@ class FontServiceImpl  (
     private val objectMapper: ObjectMapper = jacksonObjectMapper(),
     private val webClient: WebClient,
     @Value("\${api.google-font.key}") val apiKey: String,
-
     ) : FontService {
 
     private val logger: Logger = LoggerFactory.getLogger(FontServiceImpl::class.java)
@@ -32,7 +31,6 @@ class FontServiceImpl  (
 
     override fun getAllFonts(subset: String?, category: String?): List<Font> {
         val fonts = fontRepository.findAll()
-
         return if (subset != null && category != null) {
             fonts.filter { it.subsets.contains(subset) && it.category == category }
         } else if (subset != null) {
@@ -58,8 +56,7 @@ class FontServiceImpl  (
                 .uri(apiUrl)
                 .retrieve()
                 .bodyToMono(String::class.java)
-                .awaitSingle() // coroutine-friendly
-
+                .awaitSingle()
             val fonts = objectMapper.readTree(responseText)["items"]
             val fontList = fonts.map { font ->
                 Font(
@@ -70,9 +67,9 @@ class FontServiceImpl  (
                 )
             }
             fontRepository.saveAll(fontList)
-            println("✅ Fonts refreshed successfully")
+            logger.info("Successfully font refreshed: $fontList")
         } catch (e: Exception) {
-            println("❌ Error fetching fonts: ${e.message}")
+            logger.error("Error refreshing fonts: ${e.message}")
         }
     }
 

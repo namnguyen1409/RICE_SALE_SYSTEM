@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import CustomerLayout from './layouts/CustomerLayout'
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./AppRouter"; // file này chứa các route bạn đã định nghĩa
 
 function App() {
-
-
   return (
-    <div className="App">
-      <CustomerLayout />
-    </div>
-  )
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -29,8 +29,6 @@ class Device(
     @Column(name = "device_type", nullable = false, length = 20)
     var deviceType: DeviceType
 ) : BaseEntity() {
-
-    // kiểm tra có đăng nhập từ trình duyệt này hay không
     fun isSameDevice(other: Device): Boolean {
         return this.browser == other.browser
                 && this.canvasFingerprint == other.canvasFingerprint

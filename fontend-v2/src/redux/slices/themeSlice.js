@@ -55,6 +55,16 @@ const initialState = {
   colorErrorTextActive: null,
 
   colorInfo: null,
+  colorInfoBg: null,
+  colorInfoBgHover: null,
+  colorInfoBorder: null,
+  colorInfoBorderHover: null,
+  colorInfoHover: null,
+  colorInfoActive: null,
+  colorInfoTextHover: null,
+  colorInfoText: null,
+  colorInfoTextActive: null,
+
 
   colorLink: null,
   colorLinkHover: null,
@@ -293,6 +303,33 @@ const themeSlice = createSlice({
     },
     setColorInfo: (state, action) => {
       state.colorInfo = action.payload;
+    },
+    setColorInfoBg: (state, action) => {
+      state.colorInfoBg = action.payload;
+    },
+    setColorInfoBgHover: (state, action) => {
+      state.colorInfoBgHover = action.payload;
+    },
+    setColorInfoBorder: (state, action) => {
+      state.colorInfoBorder = action.payload;
+    },
+    setColorInfoBorderHover: (state, action) => {
+      state.colorInfoBorderHover = action.payload;
+    },
+    setColorInfoHover: (state, action) => {
+      state.colorInfoHover = action.payload;
+    },
+    setColorInfoActive: (state, action) => {
+      state.colorInfoActive = action.payload;
+    },
+    setColorInfoTextHover: (state, action) => {
+      state.colorInfoTextHover = action.payload;
+    },
+    setColorInfoText: (state, action) => {
+      state.colorInfoText = action.payload;
+    },
+    setColorInfoTextActive: (state, action) => {
+      state.colorInfoTextActive = action.payload;
     },
     setColorLink: (state, action) => {
       state.colorLink = action.payload;
@@ -537,6 +574,15 @@ export const {
   setColorErrorText,
   setColorErrorTextActive,
   setColorInfo,
+  setColorInfoBg,
+  setColorInfoBgHover,
+  setColorInfoBorder,
+  setColorInfoBorderHover,
+  setColorInfoHover,
+  setColorInfoActive,
+  setColorInfoTextHover,
+  setColorInfoText,
+  setColorInfoTextActive,
   setColorLink,
   setColorLinkHover,
   setColorLinkActive,

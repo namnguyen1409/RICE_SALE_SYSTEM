@@ -61,6 +61,7 @@ const MainColorPickerRow = memo(
             onChange={handleChange}
             onChangeComplete={handleChangeComplete}
             showText
+            {...props}
           />
         </Col>
       </Row>

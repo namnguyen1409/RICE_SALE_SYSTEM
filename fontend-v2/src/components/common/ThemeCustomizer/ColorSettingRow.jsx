@@ -1,53 +1,62 @@
 // components/ColorSettingRow.jsx
-import React, { useCallback } from "react";
+import { memo, useCallback, useState } from "react";
 import { Row, Col, Typography, ColorPicker } from "antd";
 
 const { Text, Link } = Typography;
 
-const ColorSettingRow = React.memo(({
+const ColorSettingRow = memo(({
   label,
-  value,
-  tempValue,
-  defaultValue,
-  setTempValue,
+  stateValue,
+  tokenValue,
   onChangeComplete,
   onReset,
   presets = [],
   t,
+  ...props
 }) => {
+
+  const [localTempValue, setLocalTempValue] = useState(null);
+
   const handleChange = useCallback((color) => {
-    setTempValue(color.toHexString());
-  }, [setTempValue]);
+    setLocalTempValue(color.toHexString());
+  }, [setLocalTempValue]);
 
   const handleChangeComplete = useCallback((color) => {
-    setTempValue(null);
     onChangeComplete(color.toHexString());
-  }, [setTempValue, onChangeComplete]);
+    setLocalTempValue(null);
+  }, [setLocalTempValue, onChangeComplete]);
+
+  const handleReset = useCallback(() => {
+    setLocalTempValue(null);
+    onReset();
+}, [setLocalTempValue, onReset]);
+
 
   return (
     <Row align="middle" style={{ gap: 16, flexWrap: "nowrap" }} className="mb-2">
       <Col flex="1">
         <Text>
           {t(label)}
-          {value && (
-            <Link className="ml-2" onClick={onReset}>
+          {stateValue && (
+            <Link className="ml-2" onClick={handleReset}>
               {t("theme.reset")}
             </Link>
           )}
         </Text>
       </Col>
       <Col>
-        <Text code>{tempValue || defaultValue}</Text>
+        <Text code>{localTempValue || stateValue || tokenValue}</Text>
       </Col>
       <Col>
         <ColorPicker
           style={{ padding: "4px" }}
-          defaultValue={value || defaultValue}
-          value={tempValue || defaultValue}
+          defaultValue={tokenValue}
+          value={localTempValue || stateValue || tokenValue}
           presets={presets}
-          color={value || defaultValue}
+          color={localTempValue || stateValue || tokenValue}
           onChange={handleChange}
           onChangeComplete={handleChangeComplete}
+          {...props}
         />
       </Col>
     </Row>

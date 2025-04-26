@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import CustomerHeader from "../components/customer/CustomerHeader";
 import { Layout } from "antd";
 const { Header, Footer, Sider, Content } = Layout;
@@ -18,7 +19,7 @@ const layoutStyle = {
   height: "100vh",
 };
 
-const CustomerLayout = () => {
+const GuestLayout = () => {
   return (
     <Layout style={layoutStyle}>
       {/* header */}
@@ -26,13 +27,8 @@ const CustomerLayout = () => {
         <CustomerHeader />
       </Header>
       <Content style={contentStyle}>
-        <div style={{ padding: 24, minHeight: 360 }}>
-          <h1>Welcome to the Customer Layout</h1>
-          <p>This is the content area.</p>
-          
-        </div>
+        <Outlet />
       </Content>
-
       <Footer style={footerStyle}>
         <div style={{ padding: 24 }}>
           <p>Footer Content</p>
@@ -42,4 +38,4 @@ const CustomerLayout = () => {
   );
 };
 
-export default CustomerLayout;
+export default GuestLayout;

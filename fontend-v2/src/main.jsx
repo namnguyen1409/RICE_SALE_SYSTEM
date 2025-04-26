@@ -1,3 +1,4 @@
+import { scan } from "react-scan";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -14,12 +15,16 @@ import { initTheme } from './redux/slices/themeSlice.js'
 const savedTheme = loadSavedTheme();
 store.dispatch(initTheme(savedTheme));
 
+scan({
+  enabled: true,
+});
+
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
     <Provider store={store}>
       <ThemeProviderWrapper>
       <App />
       </ThemeProviderWrapper>
     </Provider>,
-  // </StrictMode>,
+  </StrictMode>,
 )
